@@ -1,0 +1,23 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "samirgaire10"
+            }
+        ],
+        "Category": "Online Services",
+        "Description": "Brave search plasmoid for Plasma.",
+        "Icon": "search-symbolic",
+        "Id": "com.samirgaire10.brave",
+        "License": "BSD 3.0",
+        "Name": "Brave search",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "0.8",
+        "Website": "https://github.com/samirgaire10/com.samirgaire10.Deepl"
+    },
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-StandAloneApp": true
+}
