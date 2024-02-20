@@ -6,11 +6,6 @@
 
 
 
-
-
-
-# Google-search
-
 <h1 align="center">
 
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Hi+👋,+I'm+samir+gaire;Hi+👋,+私は,+ガイレ+サミル;Hi+👋,+म+समिर‌+गैरे+हो;)](https://samirgaire10.github.io/Portfolio/)
