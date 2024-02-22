@@ -59,7 +59,7 @@ Item {
     text: "Return to Brave"
     onClicked: {
         // Open abc.com in a web browser
-        gptWebView.url = "https://search.brave.com/"
+        braveWebView.url = "https://search.brave.com/"
     }
 }
 
@@ -81,7 +81,7 @@ Item {
 						PlasmaComponents.ToolButton {
 							text: i18n("Debug")
 							checkable: true
-							checked: gptWebViewInspector && gptWebViewInspector.enabled
+							checked: braveWebViewInspector && braveWebViewInspector.enabled
 							visible: Qt.application.arguments[0] == "plasmoidviewer" || plasmoid.configuration.debugConsole
 							enabled: visible
 							icon.name: "format-text-code"
@@ -90,8 +90,8 @@ Item {
 							PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
 							PlasmaComponents.ToolTip.visible: hovered
 							onToggled: {
-								gptWebViewInspector.visible = !gptWebViewInspector.visible;
-								gptWebViewInspector.enabled = visible || gptWebViewInspector.visible
+								braveWebViewInspector.visible = !braveWebViewInspector.visible;
+								braveWebViewInspector.enabled = visible || braveWebViewInspector.visible
 							}
 						}
 
@@ -103,7 +103,7 @@ Item {
 							PlasmaComponents.ToolTip.text: text
 							PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
 							PlasmaComponents.ToolTip.visible: hovered
-							onClicked: gptWebView.reload();
+							onClicked: braveWebView.reload();
 						}
 
 						PlasmaComponents.ToolButton {
@@ -139,7 +139,7 @@ Item {
 							enabled: proLinkContainer.visible
 							icon.name: "go-next"
 							onClicked:  {
-								gptWebView.url = proLinkField.text;
+								braveWebView.url = proLinkField.text;
 								proLinkContainer.visible= false;
 							}
 						}
@@ -162,12 +162,12 @@ Item {
 				Layout.fillHeight: true
 				Layout.fillWidth: true
 
-				id: gptWebView
+				id: braveWebView
 				focus: true
 				url: "https://search.brave.com/"
 
 				profile: WebEngineProfile {
-					id: chatGptProfile
+					id: braveProfile
 					storageName: "Brave"
 					offTheRecord: false
 					httpCacheType: WebEngineProfile.DiskHttpCache
@@ -191,7 +191,7 @@ Item {
 				}
 			}
 			WebEngineView {
-				id:gptWebViewInspector
+				id:braveWebViewInspector
 				enabled: false
 				visible: false
 				z:100
@@ -199,7 +199,7 @@ Item {
 
 				Layout.fillWidth:true
 				Layout.alignment:Qt.AlignBottom
-				inspectedView:enabled ? gptWebView : null
+				inspectedView:enabled ? braveWebView : null
 			}
 	}
 }
